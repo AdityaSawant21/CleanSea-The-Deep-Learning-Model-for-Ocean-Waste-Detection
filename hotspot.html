@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Stop Marine Pollution</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href= "{{  url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href={{  url_for('static', filename='style1.css') }}">
+
+  <!-- Custom fonts for this template -->
+  <link href="{{  url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{  url_for('static', filename= 'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic')}}" rel='stylesheet' type='text/css'>
+  <link href="{{  url_for('static', filename='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800')}}" rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{{  url_for('static', filename='css/clean-blog.min.css')}}" rel="stylesheet">
+<style>
+.admin-sidenav {
+    width: auto;
+    height: auto;
+    margin-left: 0px;
+}
+.btn {
+  background-color: tomato;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.admin-sidenav a {
+    text-decoration: none;
+}
+.admin-sidenav li {
+    text-align: justify;
+    padding: .5rem;
+    padding-left: 1rem;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    background-color: #000;
+    border: 1px solid #333;
+}
+.admin-sidenav li a {
+    color: #fff;
+}
+
+.admin-sidenav li a:active {
+    border-color: #02d3f5;
+}
+
+.admin-sidenav li:hover {
+    border-radius: 0 .5rem .5rem 0;
+    border-color: #02d3f5;
+    -webkit-transform: translate(30px, 0px);
+    transform: translate(30px, 0px);
+    background: -webkit-linear-gradient(left, #006a7b, #002340);
+    background: linear-gradient(to right, #006a7b, #002340);
+}
+
+.admin-sidenav li:active {
+    border-color: #02d3f5;
+}
+</style>
+</head>
+
+<body onload="graph1()" >
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="col-sm-4 col-xs-8">
+
+                     <a class="navbar-brand" href="/">
+                  <img class="w-24 h-24 rounded-full shadow-md" src="{{ url_for('static',filename='asd.jpg') }}" style="width:160px;height:150px;background: transparent;border-radius:9999px;"/></a>
+              
+          
+      </div>
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">About</a>
+    		<div class="dropdown-menu">
+      			<a class="dropdown-item" href="/mission">Mission</a>
+      			<a class="dropdown-item" href="/team">Our Team</a>
+      			<div class="dropdown-divider"></div>
+    		</div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+    		<div class="dropdown-menu">
+      			<a class="dropdown-item" href="/object">Plastic Object Detection</a>
+      			<a class="dropdown-item" href="/hotspot">Plastic Hotspot Detection</a>
+      			<div class="dropdown-divider"></div>
+    		</div>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static',filename='img/hotspot.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h2>Plastic Hotspot Detection</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div style="display: flex;
+justify-content: center;
+align-items: center;">
+<ul style="list-style-type: none;">
+<li style="display: inline;"><button class="btn"><a href="#" onclick="graph1()" >Ocean Garbage Patch</a></button></li>
+<li style="display: inline;"><button class="btn"><a href="#" onclick="graph2()" >Global Plastic Data</a></button></li>
+<li style="display: inline;"><button class="btn"><a href="#" onclick="graph3()" >Pacific Garbage Patch</a></button></li>
+</ul>
+        </div>
+            <div class="container-fluid" id="graph1" style="padding-right: 20px; padding left: 20px;">
+        <div class='tableauPlaceholder' id='viz1606716779207' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;OceanGarbagePatch&#47;Pacificdrift&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='OceanGarbagePatch&#47;Pacificdrift' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oc&#47;OceanGarbagePatch&#47;Pacificdrift&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606716779207');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+      <div class="container-fluid" id="graph2"style="padding-right: 20px; padding left: 20px;">
+       <div class='tableauPlaceholder' id='viz1606717628657' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPlasticData&#47;Globaldata&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GlobalPlasticData&#47;Globaldata' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPlasticData&#47;Globaldata&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606717628657');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+      <div class="container-fluid" id="graph3" style="padding-right: 20px; padding left: 20px;">
+        <div class='tableauPlaceholder' id='viz1606718515193' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PacificGarbagePatch&#47;HistoryData&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PacificGarbagePatch&#47;HistoryData' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PacificGarbagePatch&#47;HistoryData&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606718515193');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{  url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{  url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{  url_for('static', filename='js/clean-blog.min.js')}}"></script>
+    <script src={{  url_for('static', filename='js/popper.js')}}"></script>
+    <script src={{  url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src={{  url_for('static', filename='js/main.js')}}"></script>
+<script>
+function graph1() {
+  document.getElementById("graph1").style.display = "block";
+  document.getElementById("graph2").style.display = "none";
+  document.getElementById("graph3").style.display = "none";
+
+}
+function graph2() {
+  document.getElementById("graph1").style.display = "none";
+  document.getElementById("graph2").style.display = "block";
+  document.getElementById("graph3").style.display = "none";}
+function graph3() {
+  document.getElementById("graph1").style.display = "none";
+  document.getElementById("graph2").style.display = "none";
+  document.getElementById("graph3").style.display = "block";}
+</script>
