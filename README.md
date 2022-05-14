@@ -7,3 +7,10 @@ This Project will tackle problem of waste pollution by focusing on developing a 
 
 ## Task Accuracy :
 - Our system has 94% Training accuracy and 92% Testing accuracy.
+
+## Screenshots of Outputs :
+![image](https://user-images.githubusercontent.com/60505090/168440865-e14e28bd-f6cf-43bf-9e81-2533fdc100a1.png)
+![image](https://user-images.githubusercontent.com/60505090/168440910-94240949-b2a4-4121-b809-f3cb6298f92b.png)
+![image](https://user-images.githubusercontent.com/60505090/168440942-866f8d3a-e990-426e-badc-3b9efba2c53e.png)
+![image](https://user-images.githubusercontent.com/60505090/168440968-978993e9-57fa-414d-9eba-5b8dac422ecf.png)
+![image](https://user-images.githubusercontent.com/60505090/168440979-7407fb2f-12b9-473d-8e2a-ff9df106e026.png)
